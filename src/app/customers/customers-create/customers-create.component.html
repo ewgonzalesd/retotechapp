@@ -1,0 +1,56 @@
+<!-- ============================================================== -->
+<!-- Simple four boxes Row -->
+<!-- ============================================================== -->
+<div fxLayout="row" fxLayoutWrap="wrap">
+  <!-- column -->
+  <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+    <mat-card>
+      <mat-card-content>
+        <!-- Row -->
+        <div fxLayout="row" fxLayoutWrap="wrap">
+          <!-- column -->
+          <div fxFlex.gt-sm="100" fxFlex.gt-xs="100">
+            <mat-toolbar>
+              <span>Creaciòn de Clientes</span>
+              <span class="spacer"></span>
+            </mat-toolbar>
+          </div>
+        </div>
+        <form  [formGroup]="this.customersService.myForm" (ngSubmit)="registrarCustomer()">
+        <div fxLayout="row" fxLayoutWrap="wrap">
+          <!-- column -->
+          <div fxFlex.gt-sm="50" fxFlex.gt-xs="50">
+            <mat-card>
+              <mat-card-content>
+                <mat-form-field>
+                  <input matInput type="text" placeholder="Nombre" formControlName="name" id="name">
+                  <mat-hint align="end">Nombre de Cliente.</mat-hint>
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput type="text" placeholder="Apellido" formControlName="surname" id="surname">
+                  <mat-hint align="end">Apellido de Cliente.</mat-hint>
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput type="text" placeholder="Edad" formControlName="age" id="age">
+                  <mat-hint align="end">Edad</mat-hint>
+                </mat-form-field>
+                <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Fecha de Cumpleaños" formControlName="birthdate" id="birthdate"
+                       readonly (click)="picker.open()">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <mat-card-actions align="end">
+                  <button class="margin_button" mat-raised-button type="submit">Registrar</button>
+                </mat-card-actions>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+        </form>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+

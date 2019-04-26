@@ -1,0 +1,17 @@
+$themecolor: #ffffff;
+$bodytext: #000000; 
+
+footer {
+  color: $bodytext;
+  background: $themecolor;
+  font-size: 10px;
+  border-top-style: solid;
+  border-top-color: red;
+  font-weight: 500
+}
+
+.footer-xs {
+  text-align: center;
+ // padding-top: 1rem; 16px
+  padding-top: 0.75rem;
+}
